@@ -1,0 +1,48 @@
+
+<% if (is_home()) { %> 
+<header class="panel-cover">
+<% } else { %>
+<header class="panel-cover panel-cover--collapsed">
+<% } %>
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <% if (theme.logo) { %>
+        <a href="/" title="link to homepage for <%= config.title %>"><img src="<%= theme.logo %>" width="80" alt="<%= config.title %> logo" class="panel-cover__logo logo" /></a>
+        <% } %>
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage"><%= config.title %></a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          <%= config.subtitle %>
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              <% for (var i in theme.menu){ %>
+               <li class="navigation__item"><a href="<%- theme.menu[i] %>" title="" class="blog-button"><%= i %></a></li>
+              <% } %>
+
+            </ul>
+          </nav>
+
+          <%- partial('partials/social') %>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>

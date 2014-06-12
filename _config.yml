@@ -1,0 +1,10 @@
+menu:
+  首页: /#blog
+  关于: /about
+  搜索: /search
+  友链: /blogroll
+
+favicon: /favicon-avatar.png
+# logo: /favicon-avatar.png
+
+fancybox: true

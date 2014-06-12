@@ -1,0 +1,73 @@
+<%
+var title = '';
+
+if (is_category()) {
+  title = page.category;
+} else if (is_tag()) {
+  title = page.tag;
+} else if (is_month()) {
+  title = page.year + '/' + page.month;
+} else if (is_year()) {
+  title = page.year;
+} 
+
+%>
+
+<% if (type == 'index' || title == '') { %>
+   <!-- do nothing -->
+<% } else if (is_category()) {%>
+  <h1 class="archive-title"><%= __('category_title') %>: <%= title %></h1>
+  <hr class="post-list__divider" />
+<% } else if (is_tag()) { %>
+  <h1 class="archive-title"><%= __('tag_title') %>: <%= title %></h1>
+  <hr class="post-list__divider" />
+<% } else if (is_year() || is_mongth()) { %>
+  <h1 class="archive-title"><%= __('archive_title') %>: <%= title %></h1>
+  <hr class="post-list__divider" />
+<% } %>
+
+<div class="main-post-list">
+    <ol class="post-list">
+    
+    <% page.posts.each(function(post, i){ %>
+    <li>
+
+      <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- post.path %>" title="link to <%= post.title %>"><%= post.title %></a></h2>
+
+      <p class="excerpt">
+        <%- post.excerpt %>
+      </p>
+
+      <div class="post-list__meta">
+
+        <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time> &#8226; 
+
+        <span class="post-list__meta--tags tags">
+          <font class="categories">
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'categories',
+              style: 'none'
+            }) %>
+          </font>
+          <% if (post.tags && post.tags.length > 0){ %>
+            <font class="tags">
+              <%- list_tags(post.tags, {
+                show_count: false,
+                style: 'none',
+                class: 'tags'
+              }) %>
+            </font>
+          <% } %>
+
+        </span>
+      </div>
+
+      <hr class="post-list__divider" />
+    </li>
+    <% }); %>
+  </ol>
+
+  <%- partial('pagination') %>
+
+</div>
