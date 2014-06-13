@@ -1,10 +1,14 @@
+# Header
 menu:
-  首页: /#blog
-  关于: /about
-  搜索: /search
-  友链: /blogroll
+  Blog: /#blog
+  About: /about
+  Blogroll: /blogroll
 
-favicon: /favicon-avatar.png
-# logo: /favicon-avatar.png
+# Site favicon
+favicon: /favicon.png
 
+# Site logo
+# logo: /avatar.png
+
+# Enable Fancybox
 fancybox: true
