@@ -50,9 +50,11 @@ Please add the code to `layout/layout.ejs`:
 	  // add your google analytics code here
 	</script>
 
-
 ## Enable Disqus
 Please modify `disqus_shortname` setting in `_config.yml` to `huno`.
+
+## Demo
+![](./demo/demo-0.jpg)
 
 [Hexo]: http://hexo.io/
 [Uno]: https://github.com/daleanthony/uno/
