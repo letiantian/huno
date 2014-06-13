@@ -26,35 +26,32 @@ git pull
 
 ## Configuration
 
-``` yaml
-# Header
-menu:
-  Blog: /#blog
-  About: /about
-  Blogroll: /blogroll
+	# Header
+	menu:
+	  Blog: /#blog
+	  About: /about
+	  Blogroll: /blogroll
 
-# Site favicon
-favicon: /favicon.png
+	# Site favicon
+	favicon: /favicon.png
 
-# Site logo
-logo: /avatar.png
+	# Site logo
+	logo: /avatar.png
 
-# Enable Fancybox
-fancybox: true
+	# Enable Fancybox
+	fancybox: true
 
-```
 
 ## Add Google analysis code
 Please add the code to `layout/layout.ejs`:
-```
-<!--  google analytics -->
-<script>
-  // add your google analytics code here
-</script>
-```
+
+	<!--  google analytics -->
+	<script>
+	  // add your google analytics code here
+	</script>
+
 
 ## Enable Disqus
-
 Please modify `disqus_shortname` setting in `_config.yml` to `huno`.
 
 [Hexo]: http://hexo.io/
