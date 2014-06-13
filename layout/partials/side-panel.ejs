@@ -29,7 +29,14 @@
             <ul class="navigation">
 
               <% for (var i in theme.menu){ %>
-               <li class="navigation__item"><a href="<%- theme.menu[i] %>" title="" class="blog-button"><%= i %></a></li>
+                <%
+                  if (theme.menu[i]+'' == '/#blog') {
+                    nav_btn_class = 'blog-button';
+                  } else {
+                    nav_btn_class = '';
+                  }
+                %>
+                <li class="navigation__item"><a href="<%- theme.menu[i] %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
               <% } %>
 
             </ul>

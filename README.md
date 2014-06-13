@@ -15,7 +15,7 @@ git clone git://github.com/someus/huno.git themes/modernist
 Huno performs well with Hexo 2.5.7.
 
 ## Enable
-Modify `theme` setting in `_config.yml` to `huno`.
+Please modify `theme` setting in `_config.yml` to `huno`.
 
 ## Update
 
