@@ -54,7 +54,11 @@ Please add the code to `layout/layout.ejs`:
 Please modify `disqus_shortname` setting in `_config.yml` to `huno`.
 
 ## Demo
+The images below are in directory `demo`. When use the theme, delete it!
 ![](./demo/demo-0.jpg)
+![](./demo/demo-1.jpg)
+![](./demo/demo-2.jpg)
+![](./demo/demo-3.jpg)
 
 [Hexo]: http://hexo.io/
 [Uno]: https://github.com/daleanthony/uno/
