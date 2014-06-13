@@ -1,6 +1,5 @@
 # Huno
 
-> Theme for [Hexo]. Based on [modernist theme] for GitHub Pages.
 
 Huno is a responsible theme for Hexo, and it is based on [Uno].
 
@@ -46,8 +45,17 @@ fancybox: true
 ```
 
 ## Add Google analysis code
+Please add the code to `layout/layout.ejs`:
+```
+<!--  google analytics -->
+<script>
+  // add your google analytics code here
+</script>
+```
 
+## Enable Disqus
 
+Please modify `disqus_shortname` setting in `_config.yml` to `huno`.
 
 [Hexo]: http://hexo.io/
 [Uno]: https://github.com/daleanthony/uno/
