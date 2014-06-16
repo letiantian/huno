@@ -51,10 +51,10 @@ Please add the code to `layout/layout.ejs`:
 	</script>
 
 ## Enable Disqus
-Please modify `disqus_shortname` setting in `_config.yml` to `huno`.
+Please modify `disqus_shortname` setting in `_config.yml` to your disqus short name.
 
 ## Demo
-The images below are in directory `demo`. When use the theme, delete it!
+The images below are in directory `demo`. When use the theme, please delete it!
 ![](./demo/demo-0.jpg)
 ![](./demo/demo-1.jpg)
 ![](./demo/demo-2.jpg)
