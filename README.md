@@ -5,6 +5,7 @@ Huno is a responsible theme for [Hexo], and it is based on [Uno].
 
 [Uno] is a a minimal, responsive theme which is designed for [Ghost].
 
+->[Demo](http://letiantian.me/)
 
 ## Install
 
@@ -53,7 +54,7 @@ Please add the code to `layout/layout.ejs`:
 ## Enable Disqus
 Please modify `disqus_shortname` setting in `_config.yml` to your disqus short name.
 
-## Demo
+## Preview
 The images below are in directory `demo`. When use the theme, please delete it!
 ![](./demo/demo-0.jpg)
 ![](./demo/demo-1.jpg)
