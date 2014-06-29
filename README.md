@@ -5,7 +5,7 @@ Huno is a responsible theme for [Hexo], and it is based on [Uno].
 
 [Uno] is a a minimal, responsive theme which is designed for [Ghost].
 
-->[Demo](http://letiantian.me/)
+[Demo](http://letiantian.me/)
 
 ## Install
 
