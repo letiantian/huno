@@ -10,7 +10,7 @@ Huno is a responsible theme for [Hexo], and it is based on [Uno].
 ## Install
 
 ```
-git clone git://github.com/someus/huno.git themes/modernist
+git clone git://github.com/someus/huno.git themes/huno
 ```
 
 Huno performs well with Hexo 2.5.7.
