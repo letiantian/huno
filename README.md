@@ -46,6 +46,8 @@ git pull
 
 
 ## Add Google analysis code
+Switch your current directory to /{your}/{path}/{to}/{blog}/{archive}/{root}
+######cd /themes/huno/layout/
 Please add the code to `layout/layout.ejs`:
 
 	<!--  google analytics -->
