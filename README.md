@@ -56,6 +56,7 @@ Please add the code to `layout/layout.ejs`:
 	</script>
 
 ## Enable Disqus
+**Should modify the '_config.yml' file under your blog root directory**
 Please modify `disqus_shortname` setting in `_config.yml` to your disqus short name.
 
 ## Preview
