@@ -46,6 +46,8 @@ git pull
 
 
 ## Add Google analysis code
+Switch your current directory to /{your}/{path}/{to}/{blog}/{archive}/{root}
+######cd /themes/huno/layout/
 Please add the code to `layout/layout.ejs`:
 
 	<!--  google analytics -->
@@ -54,6 +56,8 @@ Please add the code to `layout/layout.ejs`:
 	</script>
 
 ## Enable Disqus
+**Should modify the '_config.yml' file under your blog root directory**
+
 Please modify `disqus_shortname` setting in `_config.yml` to your disqus short name.
 
 ## Preview
