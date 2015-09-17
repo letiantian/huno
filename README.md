@@ -71,3 +71,17 @@ The images below are in directory `demo`. When use the theme, please delete it!
 [Uno]: https://github.com/daleanthony/uno/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Ghost]: https://ghost.org/
+
+
+## Q&A
+**Question 1:**  
+
+	   5|     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	   6| 
+	>> 7|     <%
+	   8|     var title = page.title;
+	   9|     var description = page.description || '';
+	   10| 
+
+**Answer:**
+[https://github.com/someus/huno/issues/1](https://github.com/someus/huno/issues/1)
