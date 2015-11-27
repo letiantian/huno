@@ -78,13 +78,12 @@
     <script src="<%- config.root %>js/scale.fix.js"></script>
     <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
     <script src="<%- config.root %>js/gallery.js"></script>
-    <script src="<%- config.root %>js/jquery.githubRepoWidget.min.js"></script>
+    
 
     <%- partial('partials/mathjax') %>
     <%- partial('partials/google-analytics') %>
-    <% if (is_post()) {  %>
-      <%- partial('partials/awesome-toc') %>
-    <% }  %>
+    <%- partial('partials/awesome-toc') %>
+    <%- partial('github-repo-widget') %>
     <%- partial('partials/fancybox') %> 
     <%- partial('partials/killie6') %>
 

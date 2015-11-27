@@ -1,6 +1,11 @@
-<script src="<%- config.root %>js/awesome-toc.min.js"></script>
-<script>
-$.awesome_toc({
-    overlay: false,
-});
-</script>
+<% if ( theme.awesome_toc && is_post()) {  %>
+
+    <script src="<%- config.root %>js/awesome-toc.min.js"></script>
+    <script>
+        $.awesome_toc({
+            overlay: true,
+            contentId: "post-content",
+        });
+    </script>
+
+<% } %>

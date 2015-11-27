@@ -5,21 +5,28 @@ var post = page;
   <article class="post-container post-container--single">
 
     <header class="post-header">
-    
+      
+      <h1 class="post-title"><%= post.title %></h1>
+
       <% if (type == 'post') { %>
       <div class="post-meta">
-        <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> &#8226; 
+        <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> 
 
         <span class="post-meta__tags tags">
 
-            <font class="categories">
+            <% if (post.categories && post.categories.length > 0){ %>
+              <font class="categories">
+              &#8226;
               <%- list_categories(post.categories, {
                 show_count: false,
                 class: 'categories',
                 style: 'none'
               }) %>
-            </font>
+              </font>
+            <% } %>
+
             <% if (post.tags && post.tags.length > 0){ %>
+               &#8226;
               <font class="tags">
                 <%- list_tags(post.tags, {
                   show_count: false,
@@ -33,10 +40,9 @@ var post = page;
       </div>
       <% } %>
 
-      <h1 class="post-title"><%= post.title %></h1>
     </header>
 
-    <section class="post">
+    <section id="post-content" class="post">
       <%- post.content %>
     </section>
 

@@ -32,35 +32,36 @@ if (is_category()) {
     <% page.posts.each(function(post, i){ %>
     <li>
 
-      <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- post.path %>" title="link to <%= post.title %>"><%= post.title %></a></h2>
-
-      <p class="excerpt">
-        <%- post.excerpt %>
-      </p>
+      <h2 class="post-list__post-title post-title">
+        <a href="<%- config.root %><%- post.path %>" title="link to <%= post.title %>"><%= post.title %></a>
+      </h2>
 
       <div class="post-list__meta">
 
-        <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time> &#8226; 
+        <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time> 
 
         <span class="post-list__meta--tags tags">
-          <font class="categories">
-            <%- list_categories(post.categories, {
-              show_count: false,
-              class: 'categories',
-              style: 'none'
-            }) %>
-          </font>
-          <% if (post.tags && post.tags.length > 0){ %>
-            <font class="tags">
-              <%- list_tags(post.tags, {
+
+          <% if (post.categories && post.categories.length > 0){ %>
+            &#8226; 
+            <font class="categories">
+              <%- list_categories(post.categories, {
                 show_count: false,
-                style: 'none',
-                class: 'tags'
+                class: 'categories',
+                style: 'none'
               }) %>
             </font>
           <% } %>
 
         </span>
+      </div>
+
+      <div class="excerpt">
+        <% if (post.description) { %>
+          <%- post.description %>
+        <% } else if (post.excerpt) { %>
+          <%- post.excerpt %>
+        <% } %>
       </div>
 
       <hr class="post-list__divider" />

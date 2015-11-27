@@ -1,4 +1,5 @@
-@import 'http://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';
+/*@import 'http://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:300,400)';*/
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -1028,21 +1029,6 @@ code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: .85em; }
 
-pre {
-  margin-bottom: 1.3em;
-  padding: 1em 2.5%;
-  background: #e8f2fb;
-  border: 1px solid #c9e1f6;
-  overflow: auto;
-  border-radius: 3px;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: .9em;
-  font-weight: normal;
-  line-height: 1.3em; }
-  pre code {
-    padding: 0 0;
-    background: none;
-    border: none; }
 
 .date,
 .time,
@@ -1148,7 +1134,7 @@ hr {
   padding: 60px 0; }
 
 .post-meta {
-  margin: 0 0 .4em 0;
+  margin: 0 0 1.4em 0;
   color: #c7c7c7; }
 
 .post-meta__date {
@@ -1173,8 +1159,7 @@ hr {
   margin: 0 auto;
   border-radius: 3px;
   text-align: center; }
-.post pre {
-  width: 95%; }
+
 .post hr {
   display: block;
   width: 30%;
@@ -1688,16 +1673,38 @@ input[type="tel"] {
 
 /* add */
 
- table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0 0 20px;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 20px;
 }
+
 th {
-    color: #222222;
+  color: #222;
 }
 th, td {
-    border-bottom: 1px solid #AAAAAA;
-    padding: 5px 10px;
-    text-align: left;
+  border-bottom: 1px solid #AAA;
+  padding: 5px 10px;
+  text-align: left;
 }
+
+td.gutter, td.code {
+  border: medium none;
+  padding: 5px 0px;
+  text-align: left;
+}
+
+pre {
+  margin-bottom: 1.0em;
+  padding: .2em .2em;
+  background: #e8f2fb;
+  border: 1px solid #c9e1f6;
+  overflow: auto;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 1.3em; }
+  pre code {
+    padding: 0 0;
+    background: none;
+    border: none; }

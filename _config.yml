@@ -12,3 +12,15 @@ favicon: /favicon.png
 
 # Enable Fancybox
 fancybox: true
+
+# Enable Mathjax
+mathjax: true
+
+# Enable awesome-toc
+awesome_toc: true
+
+# Enable githubRepoWidget
+github_repo_widget: false
+
+## Enable highlight
+highlight: false
