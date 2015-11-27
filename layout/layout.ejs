@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <%
-    var title = page.title;
-    var description = page.description || '';
+    var title = page.title || '';
 
     if (is_archive()) {
       title = __('archive_title');
@@ -21,26 +20,17 @@
       title = __('tag_title') + ': ' + page.tag;
     }
 
+    description = '';
     if (is_home()) {
-      description = config.description;
-      title = config.title + ' | ' + config.subtitle;
+      title = config.title;
       if (page.current && page.current > 1) {
         title = 'page ' + page.current + ' | ' + config.title;
       }
     } else if (page.current && page.current > 1) {
       title = 'page ' + page.current + ' | ' + title + ' | ' + config.title;
-      description = 'page ' + page.current + ' | ' + description;
     } else if (is_post()) {
       title = title + ' | ' + config.title;
     }
-
-    if (page.excerpt) {
-      description = strip_html(page.excerpt);
-    } else if (page.content) {
-      description = strip_html(page.content);
-    }
-
-    description = description.substring(0, 200).replace(/^\s+|\s+$/g, '');
     %>
 
     <title>
@@ -51,11 +41,11 @@
     <% if (config.author){ %>
       <meta name="author" content="<%= config.author %>">
     <% } %>
-    <% if (description){ %>
-      <meta name="description" content="<%= description %>">
+    <% if ( is_home() && config.description){ %>
+      <meta name="description" content="<%= config.description %>">
     <% } %>
 
-    <%- open_graph({title: title, description: description}) %>
+    <%- open_graph({title: title}) %>
     
     <% if (theme.rss){ %>
       <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
@@ -64,8 +54,6 @@
       <link rel="icon" type="image/x-icon" href="<%- theme.favicon %>">
     <% } %>
     <%- css('css/uno.css') %>
-
-    <script src="<%- config.root %>js/jquery.min.js"></script>
 
 </head>
 <body>
@@ -84,63 +72,21 @@
         </div>
     </div>
 
-    <!-- The main JavaScript file for Casper -->
+    <!-- js files -->
+    <script src="<%- config.root %>js/jquery.min.js"></script>
     <script src="<%- config.root %>js/main.js"></script>
     <script src="<%- config.root %>js/scale.fix.js"></script>
     <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
     <script src="<%- config.root %>js/gallery.js"></script>
     <script src="<%- config.root %>js/jquery.githubRepoWidget.min.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config"> 
-      MathJax.Hub.Config({ 
-        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-    }); 
-    </script>
 
-    <!--kill ie6 -->
-    <!--[if IE 6]>
-      <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-    <![endif]-->
-
-    <!--  google analytics -->
-    <script>
-      // add your google analytics code here
-    </script>
-
-    <!-- totop -->
-    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-    <a title="back to top"><img style="width:30px;height:30px;" src="<%- config.root %>images/totop.png"/></a>
-    </div>
-    <script>
-    (function($) { 
-      var upperLimit = 100;
-      var scrollElem = $('#totop');
-      var scrollSpeed = 500; 
-      scrollElem.hide();
-      $(window).scroll(function () {            
-        var scrollTop = $(document).scrollTop();       
-        if ( scrollTop > upperLimit ) {
-          $(scrollElem).stop().fadeTo(300, 1); // fade back in           
-        }else{       
-          $(scrollElem).stop().fadeTo(300, 0); // fade out
-        }
-      });
-      $(scrollElem).click(function(){
-        $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
-      });
-    })(jQuery);
-    </script>
-
-    <!-- fancybox -->
-    <% if (theme.fancybox){ %>
-    <link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
-    <script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript">
-      (function($){
-        $('.fancybox').fancybox();
-      })(jQuery);
-    </script>
-    <% } %>
+    <%- partial('partials/mathjax') %>
+    <%- partial('partials/google-analytics') %>
+    <% if (is_post()) {  %>
+      <%- partial('partials/awesome-toc') %>
+    <% }  %>
+    <%- partial('partials/fancybox') %> 
+    <%- partial('partials/killie6') %>
 
 </body>
 </html>
