@@ -6,5 +6,6 @@ excerpt_title: Read More
 
 comment: Comments
 
-prev: Prev
-next: Next
+pagination:
+  prev: Prev
+  next: Next

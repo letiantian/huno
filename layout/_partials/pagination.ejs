@@ -1,0 +1,17 @@
+<hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    <% if (page.prev){ %>
+    	<% if (page.prev <= 1 && type == 'index') { %>
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="<%- config.root %><%- page.prev_link %>#blog">&larr; <%= __('pagination.prev') %> </a>
+        <% } else { %>
+          <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="<%- config.root %><%- page.prev_link %>">&larr; <%= __('pagination.prev') %> </a>
+        <% } %>
+    <% } %>
+
+    <span class="pagination__page-number"> <%- page.current %> / <%- page.total %></span>
+    
+    <% if (page.next){ %>
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="<%- config.root %><%- page.next_link %>"><%= __('pagination.next') %> &rarr;</a>
+    <% } %>
+</nav>

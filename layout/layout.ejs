@@ -54,6 +54,7 @@
       <link rel="icon" type="image/x-icon" href="<%- theme.favicon %>">
     <% } %>
     <%- css('css/uno.css') %>
+    <%- css('css/highlight') %>
 
 </head>
 <body>
@@ -63,12 +64,12 @@
         <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
     </span>
 
-    <%- partial('partials/side-panel') %>
+    <%- partial('_partials/side-panel') %>
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner entry">
             <%- body %>
-            <%- partial('partials/footer') %>
+            <%- partial('_partials/footer') %>
         </div>
     </div>
 
@@ -76,16 +77,13 @@
     <script src="<%- config.root %>js/jquery.min.js"></script>
     <script src="<%- config.root %>js/main.js"></script>
     <script src="<%- config.root %>js/scale.fix.js"></script>
-    <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
-    <script src="<%- config.root %>js/gallery.js"></script>
     
 
-    <%- partial('partials/mathjax') %>
-    <%- partial('partials/google-analytics') %>
-    <%- partial('partials/awesome-toc') %>
-    <%- partial('github-repo-widget') %>
-    <%- partial('partials/fancybox') %> 
-    <%- partial('partials/killie6') %>
+    <%- partial('_scripts/mathjax') %>
+    <%- partial('_scripts/google-analytics') %>
+    <%- partial('_scripts/awesome-toc') %>
+    <%- partial('_scripts/github-repo-widget') %>
+    <%- partial('_scripts/killie6') %>
 
 </body>
 </html>

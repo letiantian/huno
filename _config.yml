@@ -1,8 +1,8 @@
 # Header
 menu:
-  Blog: /#blog
-  About: /about
-  Blogroll: /blogroll
+  首页: /#blog
+  关于: /about
+  归档: /blogroll
 
 # Site favicon
 favicon: /favicon.png

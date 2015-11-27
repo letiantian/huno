@@ -34,9 +34,7 @@ q:before, q:after {
   content: '';
   content: none; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+
 
 body {
   width: 100%;
@@ -927,7 +925,7 @@ html {
 
 body {
   /*font-family: "Raleway", sans-serif;*/
-  font-family:  微软雅黑,"Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
+  font-family:  "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-size: 1em;
   color: #666666; }
 
@@ -956,7 +954,7 @@ h5 {
   margin-top: .8em;
   margin-bottom: .4em;
   /*font-family: "Roboto Slab", serif;*/
-  font-family: 微软雅黑,"Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
+  font-family: "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-weight: lighter;
   color: #333333;
   -webkit-font-smoothing: antialiased; }
@@ -999,7 +997,7 @@ blockquote {
   border: 1px solid #eeeeee;
   border-radius: 3px;
   /*font-family: "Roboto Slab", serif;*/
-  font-family:  微软雅黑,"Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
+  font-family:  "Raleway",Verdana,sans-serif,宋体, serif, "Droid Serif", Helvetica Neue, Helvetica, Arial;
   font-weight: lighter;
   font-style: italic;
   font-size: 1.0em;
@@ -1676,35 +1674,20 @@ input[type="tel"] {
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
+  border-spacing: 0; 
 }
 
 th {
   color: #222;
 }
+
 th, td {
   border-bottom: 1px solid #AAA;
   padding: 5px 10px;
   text-align: left;
 }
 
-td.gutter, td.code {
-  border: medium none;
-  padding: 5px 0px;
-  text-align: left;
-}
-
 pre {
-  margin-bottom: 1.0em;
-  padding: .2em .2em;
-  background: #e8f2fb;
-  border: 1px solid #c9e1f6;
-  overflow: auto;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  font-size: .9em;
-  font-weight: normal;
-  line-height: 1.3em; }
-  pre code {
-    padding: 0 0;
-    background: none;
-    border: none; }
+}
