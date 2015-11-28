@@ -75,6 +75,22 @@ $(document).ready(function(){
 
 官网：[awesome-toc](https://github.com/someus/awesome-toc)
 
+## 归档页面
+归档页面会显示分类、标签云以及基于日期的归档。
+
+创建新的page：
+```plain
+$ hexo new page archive
+$ cd source/archive
+$ vim index.md
+```
+
+内容修改为：
+```
+title: 归档
+layout: page-archive
+---
+```
 
 ### github_repo_widget
 可视化显示github中的项目。
@@ -83,7 +99,7 @@ $(document).ready(function(){
 
 
 ## 评论
-支持Disqus和Duoshuo，在Hexo配置文件`_config.yml`中设置名称即可，例如：
+支持Disqus和多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
 ```plain
 # Disqus
 disqus_shortname: letian
