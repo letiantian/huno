@@ -42,18 +42,24 @@ classes that you can use:
     icon-social-zerply
     icon-mail
 
------------------------------- -->
+-------------------------------->
+
+<!-- add social info here -->
 
 <nav class="cover-navigation navigation--social">
   <ul class="navigation">
 
+    <% if (config.social.github){ %>
       <!-- Github -->
       <li class="navigation__item">
-        <a href="https://github.com/someus/huno" title="Huno on GitHub">
+        <a href="https://github.com/<%= config.social.github %>" title="Huno on GitHub">
           <i class='icon icon-social-github'></i>
           <span class="label">GitHub</span>
         </a>
       </li>
+
+    <% } %>
+
 
   </ul>
 </nav>

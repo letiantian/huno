@@ -1,4 +1,0 @@
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$sans-font\".\A         on line 15 of assets/scss/global.scss\A \A 10:     height: 100%;\A 11:     max-height: 100%;\A 12: }\A 13: \A 14: body {\A 15:   font-family: $sans-font;\A 16:   font-size: 1em;\A 17:   color: $gray-darker;\A 18: }\A 19: \A 20: ::selection {"; }

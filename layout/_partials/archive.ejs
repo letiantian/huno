@@ -39,21 +39,6 @@ if (is_category()) {
       <div class="post-list__meta">
 
         <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time> 
-
-        <span class="post-list__meta--tags tags">
-
-          <% if (post.categories && post.categories.length > 0){ %>
-            &#8226; 
-            <font class="categories">
-              <%- list_categories(post.categories, {
-                show_count: false,
-                class: 'categories',
-                style: 'none'
-              }) %>
-            </font>
-          <% } %>
-
-        </span>
       </div>
 
       <div class="excerpt">

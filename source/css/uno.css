@@ -1021,8 +1021,10 @@ ul {
 
 code {
   padding: 2px 4px;
-  background: #e8f2fb;
-  border: 1px solid #c9e1f6;
+  background-color: #f8f8f8;
+  color: #d14;
+  border: none;
+  word-wrap: break-word;
   border-radius: 3px;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: .85em; }
@@ -1676,18 +1678,26 @@ table {
   width: 100%;
   margin: 0 0 10px;
   border-spacing: 0; 
+  border: 1px solid #aaa;
+}
+
+table caption {
+  font-weight: bold;
+  text-align: center;
 }
 
 th {
-  color: #222;
+  font-weight: bold;
 }
-
 th, td {
-  border-bottom: 1px solid #AAA;
+  border: 1px solid #aaa;
   padding: 5px 10px;
   text-align: left;
 }
 
+.highlight table {
+  border: none;
+}
 pre {
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: 
 }

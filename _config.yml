@@ -2,16 +2,13 @@
 menu:
   首页: /#blog
   关于: /about
-  归档: /blogroll
+  归档: /archive
 
 # Site favicon
 favicon: /favicon.png
 
 # Site logo
 # logo: /avatar.png
-
-# Enable Fancybox
-fancybox: true
 
 # Enable Mathjax
 mathjax: true
@@ -21,6 +18,3 @@ awesome_toc: true
 
 # Enable githubRepoWidget
 github_repo_widget: false
-
-## Enable highlight
-highlight: false

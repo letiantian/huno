@@ -2,9 +2,11 @@
 
     <script src="<%- config.root %>js/awesome-toc.min.js"></script>
     <script>
-        $.awesome_toc({
-            overlay: true,
-            contentId: "post-content",
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
         });
     </script>
 

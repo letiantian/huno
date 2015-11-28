@@ -3,75 +3,109 @@
 
 # Huno
 
+Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Uno](https://github.com/daleanthony/uno/)。
 
-Huno is a responsible theme for [Hexo], and it is based on [Uno].
-
-[Uno] is a a minimal, responsive theme which is designed for [Ghost].
+![](./demo.gif)
 
 
-## Install
 
-```
-git clone git://github.com/someus/huno.git themes/huno
-```
+## 安装
 
-Huno performs well with Hexo 2.5.7.
-
-## Enable
-Please modify `theme` setting in `_config.yml` to `huno`.
-
-## Update
-
-```
-cd themes/huno
-git pull
+```plain
+$ git clone git://github.com/someus/huno.git themes/huno
 ```
 
-## Configuration
+修改Hexo的配置文件`_config.xml`：
+```plain
+theme: huno
+```
 
-	# Header
-	menu:
-	  Blog: /#blog
-	  About: /about
-	  Blogroll: /blogroll
+## 更新
 
-	# Site favicon
-	favicon: /favicon.png
-
-	# Site logo
-	logo: /avatar.png
-
-	# Enable Fancybox
-	fancybox: true
+```plain
+$ cd themes/huno
+$ git pull
+```
 
 
-## Add Google analysis code
-Switch your current directory to /{your}/{path}/{to}/{blog}/{archive}/{root}
-######cd /themes/huno/layout/
-Please add the code to `layout/layout.ejs`:
+## 兼容性
+在Hexo 3.1.1测试正常。
+浏览器。
 
-	<!--  google analytics -->
-	<script>
-	  // add your google analytics code here
-	</script>
+## 配置示例
 
-## Enable Disqus
-**Should modify the '_config.yml' file under your blog root directory**
+```plain
+# Header
+menu:
+  首页: /#blog
+  关于: /about
+  归档: /archive
 
-Please modify `disqus_shortname` setting in `_config.yml` to your disqus short name.
+# Site favicon
+favicon: /favicon.png
 
-## Preview
-The images below are in directory `demo`. When use the theme, please delete it!
-![](./demo/demo-0.jpg)
-![](./demo/demo-1.jpg)
-![](./demo/demo-2.jpg)
-![](./demo/demo-3.jpg)
+# Site logo
+# logo: /avatar.png
 
-[Hexo]: http://hexo.io/
-[Uno]: https://github.com/daleanthony/uno/
-[Fancybox]: http://fancyapps.com/fancybox/
-[Ghost]: https://ghost.org/
+# Enable Mathjax
+mathjax: true
+
+# Enable awesome-toc
+awesome_toc: true
+
+# Enable githubRepoWidget
+github_repo_widget: false
+```
+
+### mathjax
+数学公式支持。其设置（layout/_scripts/mathjax.ejs）如下：
+```
+$(document).ready(function(){
+    MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    });
+});
+```
+
+官网：[mathjax](https://www.mathjax.org/)
 
 
-## Q&A
+### awesome_toc
+为文章生成目录。
+
+官网：[awesome-toc](https://github.com/someus/awesome-toc)
+
+
+### github_repo_widget
+可视化显示github中的项目。
+
+官网：[GitHub-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
+
+
+## 评论
+支持Disqus和Duoshuo，在Hexo配置文件`_config.yml`中设置名称即可，例如：
+```plain
+# Disqus
+disqus_shortname: letian
+
+# Duoshuo
+duoshuo_shortname: letian
+```
+
+> !!! 如果两个都设置，则两个评论工具都会显示。
+
+## Social Icon
+默认提供了Github的图标，Github用户名请在Hexo的配置文件`_config.yml`中配置，例如：
+```
+# Social
+social:
+  github: someus
+```
+
+可以根据需要在`layout/_partials/social.ejs`中添加更多的图标。
+
+
+## 网站统计
+将网站统计（如Google analysis、CNZZ、百度统计等）代码放入`layout/_scripts/site-analytics.ejs`即可。
+
 

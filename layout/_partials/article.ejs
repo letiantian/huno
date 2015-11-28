@@ -2,50 +2,53 @@
 var post = page;
 %>
 
-  <article class="post-container post-container--single">
+<article class="post-container post-container--single">
 
-    <header class="post-header">
-      
-      <h1 class="post-title"><%= post.title %></h1>
+  <header class="post-header">
+    
+    <h1 class="post-title"><%= post.title %></h1>
 
-      <% if (type == 'post') { %>
-      <div class="post-meta">
-        <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> 
+    <% if (type == 'post') { %>
 
-        <span class="post-meta__tags tags">
+    <div class="post-meta">
+      <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> 
 
-            <% if (post.categories && post.categories.length > 0){ %>
-              <font class="categories">
-              &#8226;
-              <%- list_categories(post.categories, {
+      <span class="post-meta__tags tags">
+
+          <% if (post.categories && post.categories.length > 0){ %>
+            <font class="categories">
+            &#8226; 分类:
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'categories',
+              style: 'none'
+            }) %>
+            </font>
+          <% } %>
+
+          <% if (post.tags && post.tags.length > 0){ %>
+             &#8226; 标签:
+            <font class="tags">
+              <%- list_tags(post.tags, {
                 show_count: false,
-                class: 'categories',
-                style: 'none'
+                style: 'none',
+                class: 'tags'
               }) %>
-              </font>
-            <% } %>
+            </font>
+          <% } %>
 
-            <% if (post.tags && post.tags.length > 0){ %>
-               &#8226;
-              <font class="tags">
-                <%- list_tags(post.tags, {
-                  show_count: false,
-                  style: 'none',
-                  class: 'tags'
-                }) %>
-              </font>
-            <% } %>
+      </span>
+    </div>
+    
+    <% } %>
 
-        </span>
-      </div>
-      <% } %>
+  </header>
 
-    </header>
+  <section id="post-content" class="article-content post">
+    <%- post.content %>
+  </section>
 
-    <section id="post-content" class="article-content post">
-      <%- post.content %>
-    </section>
-
-    <%- partial('comments') %>
-  </article>
+  <%- partial('disqus') %>
+  <%- partial('duoshuo') %>
+</article>
 

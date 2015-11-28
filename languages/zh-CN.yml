@@ -6,6 +6,10 @@ excerpt_title: 阅读全文
 
 comment: 评论
 
+categories: 分类
+tags: 标签
+archives: 归档
+
 pagination:
   prev: 上一页
   next: 下一页

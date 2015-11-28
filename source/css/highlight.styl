@@ -2,6 +2,8 @@
 // Just change those colors
 // https//github.com/chriskempson/tomorrow-theme
 
+source-font = Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif
+
 //// default
 highlight-background   = #eee
 highlight-current-line = #efefef
@@ -57,7 +59,7 @@ $line-numbers
 
 .article-content   
   pre
-    font-family font-mono
+    font-family source-font
     @extend $code-block
   .highlight
     @extend $code-block
@@ -100,7 +102,7 @@ $line-numbers
     border-radius 0.35em
     .gist-file
       border none
-      font-family font-mono
+      font-family source-font
       margin 0
       .gist-data
         background none
