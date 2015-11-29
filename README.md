@@ -7,7 +7,9 @@ Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题�
 
 ![](./demo.gif)
 
+## Demo
 
+[Huno's demo](http://hi.letiantian.me/huno/)
 
 ## 安装
 
@@ -33,7 +35,7 @@ $ git pull
 
 ## 配置示例
 
-```plain
+```yaml
 # Header
 menu:
   首页: /#blog
@@ -55,6 +57,8 @@ awesome_toc: true
 # Enable githubRepoWidget
 github_repo_widget: false
 ```
+
+menu中定义`/#blog`是必须的，示例中的`/about`和`/archive`是两个页面。`/archive`会在下面的**归档页面**中介绍。
 
 ### mathjax
 数学公式支持。其设置（layout/_scripts/mathjax.ejs）如下：
@@ -78,7 +82,7 @@ $(document).ready(function(){
 归档页面会显示分类、标签云以及基于日期的归档。
 
 在主题的配置文件`_config.yml`中：
-```plain
+```yaml
 # Header
 menu:
   首页: /#blog
@@ -102,6 +106,8 @@ layout: page-archive
 
 浏览器访问`http://127.0.0.1:4000/archive/`即可。
 
+> !! hexo 默认有一个`/archives`，如果您认为归档页面的url（`/archive`）和这个冲突，可以选更加合适的名称:blush:。
+
 ### github_repo_widget
 可视化显示github中的项目。
 
@@ -110,7 +116,7 @@ layout: page-archive
 
 ## 评论
 支持Disqus和多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
-```plain
+```yaml
 # Disqus
 disqus_shortname: letian
 
@@ -122,7 +128,7 @@ duoshuo_shortname: letian
 
 ## Social Icon
 默认提供了Github的图标，Github用户名请在Hexo的配置文件`_config.yml`中配置，例如：
-```
+```yaml
 # Social
 social:
   github: someus
@@ -134,4 +140,68 @@ social:
 ## 网站统计
 将网站统计（如Google analysis、CNZZ、百度统计等）代码放入`layout/_scripts/site-analytics.ejs`即可。
 
+## 如何将Huno生成的静态网站放在某网站子目录
 
+例如要将其放入`http://hi.letiantian.me/huno/`下，则需要：
+
+#### 修改Hexo配置文件`_config.yml`
+```yaml
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://hi.letiantian.me/huno
+root: /huno/
+```
+
+#### 修改主题的配置文件`_config.yml`
+```yaml
+# Header
+menu:
+  首页: /huno/#blog
+  关于: /huno/about
+  归档: /huno/archive
+
+# Site favicon
+favicon: /huno/favicon.png
+```
+
+#### 修改`huno/source/js/main.js`
+
+将
+```js
+if (window.location.pathname != "/") {
+  $('.panel-cover').addClass('panel-cover--collapsed');
+}
+```
+
+修改为
+```js
+if (window.location.pathname != "/huno/") {
+  $('.panel-cover').addClass('panel-cover--collapsed');
+}
+```
+
+#### 修改`huno/layout/_partials/side-panel.ejs`
+将
+```plain
+<% for (var i in theme.menu){ %>
+  <%
+    if (theme.menu[i]+'' == '/#blog') {
+      nav_btn_class = 'blog-button';
+    } else {
+      nav_btn_class = '';
+    }
+  %>
+```
+
+修改为：
+
+```plain
+<% for (var i in theme.menu){ %>
+  <%
+    if (theme.menu[i]+'' == '/huno/#blog') {
+      nav_btn_class = 'blog-button';
+    } else {
+      nav_btn_class = '';
+    }
+  %>
+```
