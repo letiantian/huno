@@ -46,10 +46,12 @@ classes that you can use:
 
 <!-- add social info here -->
 
+<% if (config.social) { %>
+
 <nav class="cover-navigation navigation--social">
   <ul class="navigation">
 
-    <% if (config.social.github){ %>
+    <% if (config.social.github) { %>
       <!-- Github -->
       <li class="navigation__item">
         <a href="https://github.com/<%= config.social.github %>" title="Huno on GitHub">
@@ -60,6 +62,7 @@ classes that you can use:
 
     <% } %>
 
-
   </ul>
 </nav>
+
+<% } %>
