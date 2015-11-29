@@ -30,7 +30,6 @@ $ git pull
 
 ## 兼容性
 在Hexo 3.1.1测试正常。
-浏览器。
 
 ## 配置示例
 
@@ -78,6 +77,15 @@ $(document).ready(function(){
 ## 归档页面
 归档页面会显示分类、标签云以及基于日期的归档。
 
+在主题的配置文件`_config.yml`中：
+```plain
+# Header
+menu:
+  首页: /#blog
+  关于: /about
+  归档: /archive
+```
+
 创建新的page：
 ```plain
 $ hexo new page archive
@@ -91,6 +99,8 @@ title: 归档
 layout: page-archive
 ---
 ```
+
+浏览器访问`http://127.0.0.1:4000/archive/`即可。
 
 ### github_repo_widget
 可视化显示github中的项目。
