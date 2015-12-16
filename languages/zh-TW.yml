@@ -1,0 +1,15 @@
+archive_title: 所有文章
+category_title: 分類
+tag_title: 標籤
+rss_title: RSS
+excerpt_title: 閱讀全文
+
+comment: 留言
+
+categories: 分類
+tags: 標籤
+archives: 所有文章
+
+pagination:
+  prev: 上一頁
+  next: 下一頁
