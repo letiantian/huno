@@ -22,13 +22,6 @@ $ git clone git://github.com/someus/huno.git themes/huno
 theme: huno
 ```
 
-## 更新
-
-```plain
-$ cd themes/huno
-$ git pull
-```
-
 
 ## 兼容性
 在Hexo 3.1.1测试正常。
@@ -159,9 +152,10 @@ social:
 ```
 
 效果如下：
+
 ![](./cs-icon.png)
 
-字体文件位于`source/fonts/china-social/`中，对应的css文件在`source/css/china-social-icon.css`。
+字体文件位于`source/fonts/china-social/`中，对应的css文件是`source/css/china-social-icon.css`。
 
 
 ## 网站统计
