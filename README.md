@@ -50,7 +50,8 @@ github_repo_widget: false
 
 menu中定义`/#blog`是必须的，示例中的`/about`和`/archive`是两个页面。`/archive`会在下面的**归档页面**中介绍。
 
-### mathjax
+**mathjax:**
+
 数学公式支持。其设置（layout/_scripts/mathjax.ejs）如下：
 ```
 $(document).ready(function(){
@@ -63,10 +64,18 @@ $(document).ready(function(){
 官网：[mathjax](https://www.mathjax.org/)
 
 
-### awesome_toc
+**awesome_toc:**
+
 为文章生成目录。
 
 官网：[awesome-toc](https://github.com/someus/awesome-toc)
+
+**github_repo_widget:**
+
+可视化显示github中的项目。
+
+官网：[GitHub-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
+
 
 ## 归档页面
 归档页面会显示分类、标签云以及基于日期的归档。
@@ -97,11 +106,6 @@ layout: page-archive
 浏览器访问`http://127.0.0.1:4000/archive/`即可。
 
 > !! hexo 默认有一个`/archives`，如果您认为归档页面的url（`/archive`）和这个冲突，可以选更加合适的名称:blush:。
-
-### github_repo_widget
-可视化显示github中的项目。
-
-官网：[GitHub-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
 
 
 ## 评论
