@@ -162,7 +162,8 @@ social:
 
 例如要将其放入`http://hi.letiantian.me/huno/`下，则需要：
 
-#### 修改Hexo配置文件`_config.yml`
+**修改Hexo配置文件`_config.yml`:**
+
 ```yaml
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -170,7 +171,8 @@ url: http://hi.letiantian.me/huno
 root: /huno/
 ```
 
-#### 修改主题的配置文件`_config.yml`
+**修改主题的配置文件`_config.yml`:**
+
 ```yaml
 # Header
 menu:
@@ -182,7 +184,7 @@ menu:
 favicon: /huno/favicon.png
 ```
 
-#### 修改`huno/source/js/main.js`
+**修改`huno/source/js/main.js`:**
 
 将
 ```js
@@ -198,7 +200,8 @@ if (window.location.pathname != "/huno/") {
 }
 ```
 
-#### 修改`huno/layout/_partials/side-panel.ejs`
+**修改`huno/layout/_partials/side-panel.ejs`:**
+
 将
 ```plain
 <% for (var i in theme.menu){ %>
