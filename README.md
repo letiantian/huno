@@ -137,6 +137,33 @@ social:
 可以根据需要在`layout/_partials/social.ejs`中添加更多的图标。
 
 
+## China Social Icon
+> 这套字体来自 [设计素材：国内常用社交图标的web字体](http://www.zcool.com.cn/gfx/ZMzM1MjEy.html)， 版权归原作者所有。在huno中CSS文件做了些修改。
+
+这套字体和上面`Social Icon`的设计得并不一样，如果混用，排版效果会略差。例如，在`layout/_partials/social.ejs`加上：
+
+```
+<li class="navigation__item">
+  <a href="" title="">
+    <i class='icon cs-icon-douban'></i>
+    <span class="label">Douban</span>
+  </a>
+</li>
+
+<li class="navigation__item">
+  <a href="" title="">
+    <i class='icon cs-icon-weibo'></i>
+    <span class="label">Weibo</span>
+  </a>
+</li>
+```
+
+效果如下：
+![](./cs-icon.png)
+
+字体文件位于`source/fonts/china-social/`中，对应的css文件在`source/css/china-social-icon.css`。
+
+
 ## 网站统计
 将网站统计（如Google analysis、CNZZ、百度统计等）代码放入`layout/_scripts/site-analytics.ejs`即可。
 
