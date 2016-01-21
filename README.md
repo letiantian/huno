@@ -1,6 +1,3 @@
-如果在中国大陆使用该主题后，访问速度变慢，可以考虑注释掉`source/css/uno.css`的第一行。
-
-
 # Huno
 
 Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Uno](https://github.com/daleanthony/uno/)。
@@ -226,3 +223,7 @@ if (window.location.pathname != "/huno/") {
     }
   %>
 ```
+
+## 其他
+
+如果在中国大陆使用该主题后，访问速度变慢，可以考虑注释掉`source/css/uno.css`的第一行。
