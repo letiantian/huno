@@ -91,7 +91,7 @@ $(document).ready(function(){
   background-size: cover; }
 ```
 
-可以看出图片路径是`source/images/background-cover.jpg`。可以根据需要替换成不同的图片，或者修改图片URL。例如修改成CDN中的某个图片：
+可以看出图片路径是`source/images/background-cover.jpg`。可以根据需要替换成不同的图片，或者修改图片URL。例如修改成CDN中的某个图片（[#28](https://github.com/someus/huno/pull/28)）：
 
 ```
 background: url("//img.alicdn.com/tps/TB1UC8nJVXXXXbRXpXXXXXXXXXX-1920-1200.jpg") top left no-repeat #666666;
