@@ -77,6 +77,27 @@ $(document).ready(function(){
 官网：[GitHub-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget)
 
 
+## 侧边栏图片
+侧边栏图片URL定义在`source/css/uno.css`中下面的这段代码中：
+```css
+.panel-cover {
+  display: block;
+  position: fixed;
+  z-index: 900;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  background: url(../images/background-cover.jpg) top left no-repeat #666666;
+  background-size: cover; }
+```
+
+可以看出图片路径是`source/images/background-cover.jpg`。可以根据需要替换成不同的图片，或者修改图片URL。例如修改成CDN中的某个图片：
+
+```
+background: url("//img.alicdn.com/tps/TB1UC8nJVXXXXbRXpXXXXXXXXXX-1920-1200.jpg") top left no-repeat #666666;
+```
+
+
 ## 归档页面
 归档页面会显示分类、标签云以及基于日期的归档。
 
