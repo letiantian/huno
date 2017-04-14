@@ -130,6 +130,10 @@ layout: page-archive
 
 
 ## 评论
+
+> **[关于对友言的支持](https://github.com/letiantian/huno/issues/40)**   
+> **[让Huno支持友言](http://www.cccttt.me/2017/04/14/huno-with-youyan/)**
+
 支持Disqus和多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
 ```yaml
 # Disqus
