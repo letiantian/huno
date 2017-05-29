@@ -1,5 +1,26 @@
 <footer class="footer">
-
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+                <div>
+                    <%- theme.about_footer %>
+                </div>
+        </section>
+        <section>
+           <h2>Follow</h2>
+           <ul class="icons">
+                <% if (theme.facebook_url) { %>
+                    <li><a href="<%- theme.facebook_url %>" class="icon style2 fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+                    <% } %>
+                <% if (theme.wechat_url) { %>
+                    <li><a href="<%- theme.wechat_url %>" class="icon style2 fa-wechat" target="_blank"><span class="label">Wechat</span></a></li>
+                    <% } %>   
+           </ul>
+       </section>
+       
+       <ul class="copyright">
+       <li> &copy; CBC Timothy. All rights reserved </li>
+       <li> Design: <a href="https://github.com/someus/huno">Huno</a> </li>
+       </ul>
+   </div>
 </footer>
