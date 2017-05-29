@@ -129,21 +129,9 @@ layout: page-archive
 > !! hexo 默认有一个`/archives`，如果您认为归档页面的url（`/archive`）和这个冲突，可以选更加合适的名称:blush:。
 
 
-## 评论
+## 评论系统
 
-> **[关于对友言的支持](https://github.com/letiantian/huno/issues/40)**   
-> **[让Huno支持友言](http://www.cccttt.me/2017/04/14/huno-with-youyan/)**
-
-支持Disqus和多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
-```yaml
-# Disqus
-disqus_shortname: letian
-
-# Duoshuo
-duoshuo_shortname: letian
-```
-
-> !!! 如果两个都设置，则两个评论工具都会显示。
+将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在`layout/_partials/comments.js`中即可。
 
 ## Social Icon
 默认提供了Github的图标，Github用户名请在Hexo的配置文件`_config.yml`中配置，例如：
