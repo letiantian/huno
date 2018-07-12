@@ -247,3 +247,6 @@ if (window.location.pathname != "/huno/") {
 ## 其他
 
 如果在中国大陆使用该主题后，访问速度变慢，可以考虑注释掉`source/css/uno.css`的第一行。
+
+## License
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
