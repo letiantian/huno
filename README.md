@@ -6,7 +6,7 @@ Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题�
 
 ## Demo
 
-[Huno's demo](http://hi.letiantian.me/huno/)
+[Huno's demo](http://hi.letiantian.xyz/huno/)
 
 ## 安装
 
@@ -177,14 +177,14 @@ social:
 
 ## 如何将Huno生成的静态网站放在某网站子目录
 
-例如要将其放入`http://hi.letiantian.me/huno/`下，则需要：
+例如要将其放入`http://hi.letiantian.xyz/huno/`下，则需要：
 
 **修改Hexo配置文件`_config.yml`:**
 
 ```yaml
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://hi.letiantian.me/huno
+url: http://hi.letiantian.xyz/huno
 root: /huno/
 ```
 
