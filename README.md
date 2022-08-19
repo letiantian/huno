@@ -6,7 +6,8 @@ Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题�
 
 ## Demo
 
-[Huno's demo](http://hi.letiantian.xyz/huno/)
+[Huno's demo](https://letiantian.xyz/hi/huno/)
+
 
 ## 安装
 
